@@ -1,9 +1,24 @@
-What happens when you initialize a repository? Why do you need to do it?
-
-When you initialize a repository, you have git add meta data and track changes to this repository.
+Q. What happens when you initialize a repository? Why do you need to do it?
+R. When you initialize a repository, you have git add meta data and track changes to this repository.
 Initailizing the repository is needed so that git can track the changes in the directory.
 
-How is the staging area different from the working directory and the repository? What value do you think it offers?
+Q. How is the staging area different from the working directory and the repository? What value do you think it offers?
+R. Working dir has all the changes done since the previous commit. Staging has only those changes which the author thinks should belong into the next commit - it is a holding area for changes that need to go into the next commit. 
+Staging lets us group changes that belong into the same commit. It helps in logically separating the changes.
 
-Working dir has all the changes done since the previous commit. Staging has only those changes which the author thinks should belong into the next commit - it is a holding area for changes that need to go into the next commit. 
-Staging lets us group changes that belong into the same commit. It helps in logically separating the changes. 
+Q. How can you use the staging area to make sure you have one commit per logical change?
+R. Stage only those changes which belong together logically. Commit these from staging, then move to the next set which belong together.
+
+Q. What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+R. When were trying to try out an experimental feature that is not ready for release. Branches will isolate the changes and let BAU work continue on the master branch.
+
+Q. How do the diagrams help you visualize the branch structure?
+R. Diagram provide visual reference which is simpler to understand as compared to git log.  
+
+Q. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+R. Merging combines changes from different branches into a single branch, bringing together all the changes done. We represent it as 2 branches joining since it is so.
+
+Q. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+R. Auto merging automates routine and simple merges - less things for the human to do. But it will not be able to a 100% perfect job - especially when there are conflicts. The 'auto-when-simple' merging balances this well.
+
+
